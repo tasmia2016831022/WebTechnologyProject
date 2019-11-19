@@ -3,7 +3,7 @@ const app = express();
 
 app.use((req,res,next)=>{
     res.status(200).json({
-        msg:"this works"
+        msg:"this works khgjhkfgfhf"
     });
 });
 
