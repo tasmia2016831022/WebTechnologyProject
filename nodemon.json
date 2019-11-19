@@ -1,0 +1,6 @@
+{
+    "env":{
+        "MONGO_PASS" : "node-rest-shop",
+        "JWT_KEY" : "secret" 
+    }   
+   }
