@@ -1,0 +1,25 @@
+{
+  "name": "webtecnologyproject",
+  "version": "1.0.0",
+  "description": "simple blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tasmia2016831022/WebTecnologyProject.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "tasmia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tasmia2016831022/WebTecnologyProject/issues"
+  },
+  "homepage": "https://github.com/tasmia2016831022/WebTecnologyProject#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
