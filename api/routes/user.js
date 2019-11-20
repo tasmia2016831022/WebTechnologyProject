@@ -5,6 +5,7 @@ const User = require('../models/user');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+//user login
 router.post('/login',(req, res, next)=> {
     User.findOne({email: req.body.email})
     .exec()
@@ -53,10 +54,8 @@ router.post('/login',(req, res, next)=> {
             });
 });
 
-router.post('/signup', (req, res, next) => {
-    
-    
-    
+//user register
+router.post('/signup', (req, res, next) => {  
     bcrypt.hash(req.body.password,10,(error,hash)=> {
         console.log(req.body);
         if(error){
@@ -92,6 +91,7 @@ router.post('/signup', (req, res, next) => {
 
 });
 
+//get user
 router.get('/:userId',(req, res, next) => {
     const id = req.params.userId;
    User.findById(id)

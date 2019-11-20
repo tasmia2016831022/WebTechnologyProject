@@ -4,9 +4,11 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
+//routes
 const postRoutes = require('./api/routes/post');
 const userRoutes = require('./api/routes/user');
 
+//connect mongodb
 mongoose.connect('mongodb+srv://node-rest-shop:'+process.env.MONGO_PASS+'@cluster0-brt1k.mongodb.net/test?retryWrites=true&w=majority',{
    useMongoClient : true 
 });
@@ -20,6 +22,7 @@ app.use(bodyParser.urlencoded(
 
 app.use(bodyParser.json());
 
+//CORS
 app.use((req, res , next) => {
     res.header('Access-Control-Allow-Origin','*');
     res.header('Access-Control-Allow-Headers','Origin, X-Requested-With, Content-Type, Accept, Authorization');
@@ -31,11 +34,11 @@ app.use((req, res , next) => {
     next();
 });
 
-//mapping apis form here
+//mapping apis 
 app.use('/post',postRoutes);
 app.use('/user',userRoutes);
 
-//================== END ============ //
+
 
 app.use((req, res , next) => {
     const error = new Error('Not found');

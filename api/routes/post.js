@@ -4,6 +4,8 @@ const Post = require('../models/post');
 const mongoose = require('mongoose');
 const checkAuth = require('../middleware/checkauth');
 
+
+//get all posts
 router.get('/',(req, res, next) => {
 
     Post.find()
@@ -21,6 +23,7 @@ router.get('/',(req, res, next) => {
     });
 });
 
+//get mypost
 router.get('/mypost/:userId',(req, res, next) => {
   Post.find({userId : req.params.userId})
   .exec()
@@ -38,6 +41,7 @@ router.get('/mypost/:userId',(req, res, next) => {
 });
 
 
+//posting
 router.post('/', (req, res, next) => {
     const post = new Post({
       _id : new mongoose.Types.ObjectId(),
@@ -64,7 +68,7 @@ router.post('/', (req, res, next) => {
   
 });
 
-
+//get a post
 router.get('/:postId',(req, res, next) => {
    const id = req.params.postId;
   Post.findById(id)
@@ -85,6 +89,7 @@ router.get('/:postId',(req, res, next) => {
   });
 });
 
+//delete a post
 router.delete("/:postId", (req, res, next)=>{
 const id = req.params.postId;
 Post.remove({
@@ -103,6 +108,7 @@ Post.remove({
 });
 });
 
+//patch a post
 router.patch("/:postId",(req, res, next)=> {
  const id = req.params.postId;
  const updateOps = {};
