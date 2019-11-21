@@ -1,0 +1,61 @@
+html{
+    scroll-behavior: smooth;
+  }
+  .down-navbar{
+    -webkit-box-shadow: 0 2px 5px 0 rgba(48,57,58, 0.2), 0 3px 3px 0 rgba(48,57,58, 0.19);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0 2px 5px 0 rgba(48,57,58, 0.2), 0 3px 3px 0 rgba(48,57,58, 0.19);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         0 2px 2px 0 rgba(48,57,58, 0.2), 0 3px 3px 0 rgba(48,57,58, 0.19);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  }
+  
+  .nav-dropdown{
+    background-color: #ffffff !important;
+  }
+  
+  .nav-hover-link{
+    color: #30393A !important;
+  
+  }
+  .nav-hover-link:hover{
+    background: #A51C30 !important;
+  
+    color: #ffffff !important;
+  }
+  
+  
+  .nav-hr{
+    background-color:#30393A !important;
+    opacity: 0.3;
+  }
+  .isDisabled {
+    color: currentColor;
+    cursor: not-allowed !important; 
+    text-decoration: none;
+    pointer-events: none;
+  }
+  
+  
+  
+  @media screen and (max-width:768px){
+    #sust-logo-id{
+      visibility: hidden;
+    }
+  
+    .iict-logo {
+      position: absolute;
+      left: 20px;
+      top: 0;
+      z-index: 999;
+      float: left;
+      height: 50px;
+      width: 100px !important;
+    }
+  
+    .nav-hover-link{
+      color: #1E2126 !important;
+    
+    }
+    .nav-hover-link:hover{
+  
+      color: #A51C30 !important;
+    }
+  }
